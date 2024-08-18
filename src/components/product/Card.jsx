@@ -1,16 +1,25 @@
 import {
   CartButtonStyled,
   FeaturedCardStyled,
-  LableOutOfStock,
+  LableDiscountStyled,
+  LableOutOfStockStyled,
   WrapCard,
+  WrapLableArrivalsStyled,
 } from "../../styles/Product";
 
-const Card = ({ imgUrl, buttonTitle, lable }) => {
+const Card = ({ imgUrl, buttonTitle, lable, backGroud, discount }) => {
   return (
     <WrapCard>
       <FeaturedCardStyled src={imgUrl} />
       {buttonTitle && <CartButtonStyled>{buttonTitle}</CartButtonStyled>}
-      <LableOutOfStock>{lable}</LableOutOfStock>
+      {lable && (
+        <WrapLableArrivalsStyled>
+          {discount && <LableDiscountStyled>{discount}</LableDiscountStyled>}
+          <LableOutOfStockStyled backGroud={backGroud}>
+            {lable}
+          </LableOutOfStockStyled>
+        </WrapLableArrivalsStyled>
+      )}
     </WrapCard>
   );
 };

@@ -85,6 +85,15 @@ export const ButtonExploreStyled = styled(Button)`
     margin-top: 0px;
     width: 160px;
   }
+  @media (max-width: 500px) {
+    margin-top: 0px;
+    width: 100px;
+  }
+  @media (max-width: 400px) {
+    margin-top: -16px;
+    width: 80px;
+    border-radius: 10px;
+  }
 `;
 
 export const ButtonTextStyled = styled.p`
@@ -92,8 +101,14 @@ export const ButtonTextStyled = styled.p`
   font-size: 20px;
   font-weight: 600;
   margin: 0;
+  @media (max-width: 425px) {
+    font-size: 12px;
+  }
   @media (max-width: 576px) {
     font-size: 14px;
+  }
+  @media (max-width: 500px) {
+    font-size: 12px;
   }
 `;
 
