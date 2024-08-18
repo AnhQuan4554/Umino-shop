@@ -7,6 +7,14 @@ export const WrapLayoutProduct = styled.div`
   flex-direction: column;
   margin-top: 100px;
   margin-bottom: 200px;
+  @media (max-width: 768px) {
+    margin-top: 70px;
+    margin-bottom: 150px;
+  }
+  @media (max-width: 576px) {
+    margin-top: 20px;
+    margin-bottom: 100px;
+  }
 `;
 
 export const WrapProduct = styled.div`
